@@ -11,13 +11,14 @@ class PayeesManager extends React.Component {
     }
 
     static calculateState() {
-        const {payees, sortField} = PayeesStore.getState();
+        const {payees, sortField, sortDirection} = PayeesStore.getState();
         const {fetchPayees, sortPayees} = Actions;
         return {
             payees,
             fetchPayees,
             sortPayees,
-            sortField
+            sortField,
+            sortDirection
         }
     }
 
